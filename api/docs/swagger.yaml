@@ -1,0 +1,599 @@
+definitions:
+  entity.Error:
+    properties:
+      message:
+        type: string
+    type: object
+  entity.Login:
+    properties:
+      password:
+        example: '@Abdulaziz2004'
+        type: string
+      usernameoremail:
+        example: abdulazizxoshimov22@gmail.com
+        type: string
+    type: object
+  entity.PaginatedResponse:
+    properties:
+      data:
+        $ref: '#/definitions/entity.UserListResponse'
+      limit:
+        type: integer
+      page:
+        type: integer
+      totalCount:
+        type: integer
+      totalPages:
+        type: integer
+    type: object
+  entity.ResetPassword:
+    properties:
+      email:
+        type: string
+      new_password:
+        type: string
+      otp:
+        type: string
+    type: object
+  entity.TokenResp:
+    properties:
+      access_token:
+        type: string
+      refresh_token:
+        type: string
+      role:
+        type: string
+      user_id:
+        type: string
+    type: object
+  entity.User:
+    properties:
+      createdAt:
+        type: string
+      email:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      password:
+        type: string
+      refreshT:
+        type: string
+      role:
+        type: string
+      surName:
+        type: string
+      userName:
+        type: string
+    type: object
+  entity.UserCreateRequst:
+    properties:
+      email:
+        type: string
+      name:
+        type: string
+      password:
+        type: string
+      surname:
+        type: string
+      username:
+        type: string
+    type: object
+  entity.UserCreateResponse:
+    properties:
+      id:
+        type: string
+    type: object
+  entity.UserListResponse:
+    properties:
+      user:
+        items:
+          $ref: '#/definitions/entity.User'
+        type: array
+      userCount:
+        type: integer
+    type: object
+  entity.UserResponse:
+    properties:
+      accessT:
+        type: string
+      email:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      refreshT:
+        type: string
+      role:
+        type: string
+      surName:
+        type: string
+      userName:
+        type: string
+    type: object
+  entity.Weather:
+    properties:
+      city:
+        type: string
+      cloud:
+        type: integer
+      cloudColor:
+        type: string
+      country:
+        type: string
+      createdAt:
+        type: string
+      id:
+        type: string
+      lat:
+        type: number
+      lon:
+        type: number
+      tempC:
+        type: number
+      tempColor:
+        type: string
+      windColor:
+        type: string
+      windKph:
+        type: number
+    type: object
+info:
+  contact: {}
+  description: 'Contacs: https://t.me/Abuzada0401'
+  title: Datagaze_Backend
+paths:
+  /forgot/{email}:
+    post:
+      consumes:
+      - application/json
+      description: Api for sending otp
+      parameters:
+      - description: Email
+        in: path
+        name: email
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/entity.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/entity.Error'
+      summary: Forget Password
+      tags:
+      - registration
+  /login:
+    post:
+      consumes:
+      - application/json
+      description: Api for login user
+      parameters:
+      - description: Login Model
+        in: body
+        name: login
+        required: true
+        schema:
+          $ref: '#/definitions/entity.Login'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/entity.UserResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/entity.Error'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/entity.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/entity.Error'
+      summary: Login
+      tags:
+      - registration
+  /register:
+    post:
+      consumes:
+      - application/json
+      description: Api for register user
+      parameters:
+      - description: Register User
+        in: body
+        name: User
+        required: true
+        schema:
+          $ref: '#/definitions/entity.UserCreateRequst'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/entity.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/entity.Error'
+        "409":
+          description: Conflict
+          schema:
+            $ref: '#/definitions/entity.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/entity.Error'
+      summary: Register
+      tags:
+      - registration
+  /reset-password:
+    put:
+      consumes:
+      - application/json
+      description: Api for reset password
+      parameters:
+      - description: Reset Password
+        in: body
+        name: User
+        required: true
+        schema:
+          $ref: '#/definitions/entity.ResetPassword'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: boolean
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/entity.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/entity.Error'
+      summary: Reset Password
+      tags:
+      - registration
+  /token/{refresh}:
+    get:
+      consumes:
+      - application/json
+      description: Api for updated acces token
+      parameters:
+      - description: Refresh Token
+        in: path
+        name: refresh
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/entity.TokenResp'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/entity.Error'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/entity.Error'
+        "409":
+          description: Conflict
+          schema:
+            $ref: '#/definitions/entity.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/entity.Error'
+      summary: New Token
+      tags:
+      - registration
+  /user:
+    post:
+      consumes:
+      - application/json
+      description: Api for create a new user
+      parameters:
+      - description: Create User Model
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/entity.UserCreateRequst'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/entity.UserCreateResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/entity.Error'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/entity.Error'
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/entity.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/entity.Error'
+      security:
+      - BearerAuth: []
+      summary: Create User
+      tags:
+      - users
+  /user/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Api for deleting user by ID
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/entity.Error'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/entity.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/entity.Error'
+      security:
+      - BearerAuth: []
+      summary: Delete User
+      tags:
+      - users
+    get:
+      consumes:
+      - application/json
+      description: Api for getting user by ID
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/entity.UserResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/entity.Error'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/entity.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/entity.Error'
+      security:
+      - BearerAuth: []
+      summary: Get User
+      tags:
+      - users
+    put:
+      consumes:
+      - application/json
+      description: Api for updating user by ID
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Update User Model
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/entity.UserCreateRequst'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/entity.Error'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/entity.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/entity.Error'
+      security:
+      - BearerAuth: []
+      summary: Update User
+      tags:
+      - users
+  /users:
+    get:
+      consumes:
+      - application/json
+      description: Api for getting all users with pagination
+      parameters:
+      - description: 'Page number (default: 1)'
+        in: query
+        name: page
+        type: integer
+      - description: 'Number of users per page (default: 10)'
+        in: query
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/entity.PaginatedResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/entity.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/entity.Error'
+      security:
+      - BearerAuth: []
+      summary: Get All Users with Paging
+      tags:
+      - users
+  /users/verify:
+    post:
+      consumes:
+      - application/json
+      description: Api for verify register
+      parameters:
+      - description: email
+        in: query
+        name: email
+        required: true
+        type: string
+      - description: code
+        in: query
+        name: code
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/entity.UserResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/entity.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/entity.Error'
+      summary: Verify
+      tags:
+      - registration
+  /verify:
+    post:
+      consumes:
+      - application/json
+      description: Api for verify user
+      parameters:
+      - description: Email
+        in: query
+        name: email
+        required: true
+        type: string
+      - description: OTP
+        in: query
+        name: otp
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: boolean
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/entity.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/entity.Error'
+      summary: Verify OTP
+      tags:
+      - registration
+  /weather:
+    get:
+      consumes:
+      - application/json
+      description: API for getting weather data by city
+      parameters:
+      - description: City name
+        in: query
+        name: city
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/entity.Weather'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/entity.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/entity.Error'
+      security:
+      - BearerAuth: []
+      summary: Get Weather
+      tags:
+      - weather
+securityDefinitions:
+  BearerAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

@@ -1,0 +1,121 @@
+{"level":"info","ts":1738327464.1249425,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"fatal","ts":1738327464.1259394,"caller":"logger/logger.go:44","msg":"failed to migrate database: %v","error":"failed to execute migration migrations/000001_.up.sql: pq: syntax error at or near \")\""}
+{"level":"info","ts":1738327547.5271416,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"fatal","ts":1738327547.5276973,"caller":"logger/logger.go:44","msg":"failed to migrate database: %v","error":"failed to execute migration migrations/000001_.up.sql: pq: syntax error at or near \")\""}
+{"level":"info","ts":1738327804.7714012,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"fatal","ts":1738327804.7752125,"caller":"logger/logger.go:44","msg":"failed to migrate database: %v","error":"failed to execute migration migrations/000001_.up.sql: pq: relation \"users\" already exists"}
+{"level":"info","ts":1738327881.4091158,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"info","ts":1738327985.1985013,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738328013.6452155,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"fatal","ts":1738328013.645767,"caller":"logger/logger.go:44","msg":"failed to migrate database: %v","error":"failed to execute migration migrations/000001_.up.sql: pq: relation \"users\" already exists"}
+{"level":"info","ts":1738349853.2968705,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"fatal","ts":1738349853.2977006,"caller":"logger/logger.go:44","msg":"failed to migrate database: %v","error":"failed to execute migration migrations/000001_.up.sql: pq: relation \"users\" already exists"}
+{"level":"info","ts":1738349923.1771467,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"error","ts":1738350007.939025,"caller":"logger/logger.go:40","msg":"error while adding user to database","error":"pq: column \"refresh_t\" of relation \"users\" does not exist"}
+{"level":"info","ts":1738350045.39278,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738350063.8891392,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"error","ts":1738350069.1957982,"caller":"logger/logger.go:40","msg":"error while adding user to database","error":"pq: new row for relation \"users\" violates check constraint \"users_role_check\""}
+{"level":"info","ts":1738350132.7829027,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738350139.2457314,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"fatal","ts":1738350139.2466893,"caller":"logger/logger.go:44","msg":"failed to migrate database: %v","error":"failed to execute migration migrations/000001_.up.sql: pq: relation \"users\" already exists"}
+{"level":"info","ts":1738350396.2887092,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"error","ts":1738350416.0612483,"caller":"logger/logger.go:40","msg":"error while retrieving user from database","error":"pq: column \"deleted_at\" does not exist"}
+{"level":"info","ts":1738350526.0629528,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738350532.4802532,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"error","ts":1738350535.5305393,"caller":"logger/logger.go:40","msg":"error while retrieving user from database","error":"pq: syntax error at or near \"AND\""}
+{"level":"info","ts":1738350567.2405026,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738350571.1050284,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"error","ts":1738350574.1919148,"caller":"logger/logger.go:40","msg":"error while retrieving user from database","error":"pq: syntax error at or near \"AND\""}
+{"level":"info","ts":1738350611.5805092,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738350615.4802084,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"error","ts":1738350618.6097791,"caller":"logger/logger.go:40","msg":"error while retrieving user from database","error":"pq: syntax error at or near \"=\""}
+{"level":"info","ts":1738350725.9257212,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738350729.764673,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"error","ts":1738350732.427944,"caller":"logger/logger.go:40","msg":"error while retrieving user from database","error":"missing destination name refresh_t in *entity.User"}
+{"level":"info","ts":1738350830.4068685,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738350835.8554575,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"error","ts":1738350839.3071349,"caller":"logger/logger.go:40","msg":"error while retrieving user from database","error":"missing destination name refresh_t in *entity.User"}
+{"level":"info","ts":1738351314.8715212,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738351319.6165297,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"error","ts":1738351325.840702,"caller":"logger/logger.go:40","msg":"error while retrieving user from database","error":"missing destination name refresh_t in *entity.User"}
+{"level":"info","ts":1738351472.511575,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738351481.318997,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"info","ts":1738351650.7382746,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738351655.884384,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"info","ts":1738351913.9830837,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738351966.7386715,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"info","ts":1738352101.1382785,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738352107.1898634,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"info","ts":1738352148.392547,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738352151.9442878,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"info","ts":1738352193.9544501,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738352201.959358,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"error","ts":1738352205.5499692,"caller":"logger/logger.go:40","msg":"error while updating user in database","error":"pq: column \"deleted_at\" does not exist"}
+{"level":"info","ts":1738352249.781111,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738352254.1300159,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"info","ts":1738352322.0574448,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738352327.6608903,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"info","ts":1738352542.783847,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738352546.8095767,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"error","ts":1738352573.0926156,"caller":"logger/logger.go:40","msg":"error while retrieving user from database","error":"sql: no rows in result set"}
+{"level":"info","ts":1738352924.8525603,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738400376.1089714,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"info","ts":1738400429.3737118,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738400429.3739755,"caller":"logger/logger.go:32","msg":"Weather cron job stopped"}
+{"level":"info","ts":1738400433.7934828,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"info","ts":1738400514.8924408,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738400522.231143,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"info","ts":1738400646.4166255,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738400649.784579,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"info","ts":1738400781.2621613,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738400786.1828415,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"info","ts":1738401083.4301708,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738401083.430401,"caller":"logger/logger.go:32","msg":"Weather cron job stopped"}
+{"level":"info","ts":1738401087.6108572,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"info","ts":1738401107.5058546,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738401107.5060823,"caller":"logger/logger.go:32","msg":"Weather cron job stopped"}
+{"level":"info","ts":1738401108.8532228,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"info","ts":1738401158.0613563,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738401163.114864,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"info","ts":1738401188.409654,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738401188.409986,"caller":"logger/logger.go:32","msg":"Weather cron job stopped"}
+{"level":"info","ts":1738401201.57544,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"error","ts":1738401802.1692982,"caller":"logger/logger.go:40","msg":"Weather cron job failed for %s: %v","error":"pq: relation \"weather\" does not exist"}
+{"level":"error","ts":1738401802.448833,"caller":"logger/logger.go:40","msg":"Weather cron job failed for %s: %v","error":"weather API returned status: 400 Bad Request"}
+{"level":"error","ts":1738401802.7792974,"caller":"logger/logger.go:40","msg":"Weather cron job failed for %s: %v","error":"pq: relation \"weather\" does not exist"}
+{"level":"info","ts":1738401813.1549695,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738401907.3264036,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"info","ts":1738402215.4177332,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738402261.2784047,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"info","ts":1738402634.759038,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738402677.3704064,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"info","ts":1738402783.0483308,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738402787.061369,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"error","ts":1738402790.93839,"caller":"logger/logger.go:40","msg":"error while fetch weather","error":"pq: invalid input syntax for type integer: \"Tashkent-1738402790\""}
+{"level":"info","ts":1738402865.907243,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738402871.3779423,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"error","ts":1738402875.4689384,"caller":"logger/logger.go:40","msg":"error while fetch weather","error":"pq: invalid input syntax for type integer: \"Tashkent-1738402875\""}
+{"level":"info","ts":1738402972.254124,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738402975.8703966,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"error","ts":1738402980.5399764,"caller":"logger/logger.go:40","msg":"error while fetch weather","error":"pq: invalid input syntax for type integer: \"Tashkent-1738402980\""}
+{"level":"info","ts":1738403063.0754762,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738403063.075658,"caller":"logger/logger.go:32","msg":"Weather cron job stopped"}
+{"level":"info","ts":1738403070.474481,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"info","ts":1738403116.7328436,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738403131.123292,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"error","ts":1738403136.158765,"caller":"logger/logger.go:40","msg":"error while get weather","error":"sql: no rows in result set"}
+{"level":"error","ts":1738403731.8471718,"caller":"logger/logger.go:40","msg":"Weather cron job failed for %s: %v","error":"weather API returned status: 400 Bad Request"}
+{"level":"error","ts":1738403868.002672,"caller":"logger/logger.go:40","msg":"error while fetch weather","error":"failed to fetch weather: Get \"http://api.weatherapi.com/v1/current.json?key=27b3b6dd5b3b4639939195251253101&q=Tashkent\": dial tcp: lookup api.weatherapi.com on 127.0.0.53:53: read udp 127.0.0.1:46308->127.0.0.53:53: i/o timeout"}
+{"level":"error","ts":1738404331.974603,"caller":"logger/logger.go:40","msg":"Weather cron job failed for %s: %v","error":"weather API returned status: 400 Bad Request"}
+{"level":"info","ts":1738404479.4138181,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738404489.9325001,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"info","ts":1738404596.6436396,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738404603.543534,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"info","ts":1738404680.74323,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738404698.0162177,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"info","ts":1738404796.5237935,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738404796.5242064,"caller":"logger/logger.go:32","msg":"Weather cron job stopped"}
+{"level":"info","ts":1738404802.1495419,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"info","ts":1738404818.2376926,"caller":"logger/logger.go:32","msg":"api gateway service stops"}
+{"level":"info","ts":1738404846.6446877,"caller":"logger/logger.go:32","msg":"Listen: ","address":"localhost:7777"}
+{"level":"info","ts":1738405124.021077,"caller":"logger/logger.go:32","msg":"api gateway service stops"}

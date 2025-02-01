@@ -1,0 +1,22 @@
+p, unauthorized, /swagger/*,  GET
+
+
+p, unauthorized, /user, PUT
+p, unauthorized, /user/{id}, GET
+p, unauthorized, /user/profile, PUT
+p, unauthorized, /user/password, PUT
+p, unauthorized, /user/posts, GET
+p, unauthorized, /user/{id}, PUT
+p, unauthorized, /user, POST
+p, unauthorized, /user/{id}, DELETE
+p, unauthorized, /users, GET
+p, unauthorized, /weather, GET
+p, unauthorized, /register, POST
+p, unauthorized, /login, Post
+p, unauthorized, /forgot/{email}, POST
+p, unauthorized, /verify, POST
+p, unauthorized, /reset-password, PUT
+p, unauthorized, /token/{refresh}, GET
+p, unauthorized, /users/verify, POST
+
+
